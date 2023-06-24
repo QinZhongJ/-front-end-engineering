@@ -5,6 +5,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.60.0
   babel-eslint: ^10.1.0
   eslint: ^8.43.0
+  eslint-config-airbnb-base: ^15.0.0
   eslint-config-prettier: ^8.8.0
   eslint-plugin-import: ^2.27.5
   eslint-plugin-prettier: ^4.2.1
@@ -21,6 +22,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.60.0_7yfldhli4vs6yywnkyiujhawka
   babel-eslint: 10.1.0_eslint@8.43.0
   eslint: 8.43.0
+  eslint-config-airbnb-base: 15.0.0_reondqha3k2utzsghz7hyp2koq
   eslint-config-prettier: 8.8.0_eslint@8.43.0
   eslint-plugin-import: 2.27.5_csvgoyt7i2a6lgns4ftkdghrre
   eslint-plugin-prettier: 4.2.1_zh6vkmzat4wtnmvmftdassiwyu
@@ -738,6 +740,10 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
+  /confusing-browser-globals/1.0.11:
+    resolution: {integrity: sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==}
+    dev: true
+
   /cosmiconfig/8.2.0:
     resolution: {integrity: sha512-3rTMnFJA1tCOPwRxtgF4wd7Ab2qvDbL8jX+3smjIbS4HlZBagTlpERbdN7iAbWlrfxE3M8c27kTwTawQ7st+OQ==}
     engines: {node: '>=14'}
@@ -935,6 +941,21 @@ packages:
   /escape-string-regexp/4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /eslint-config-airbnb-base/15.0.0_reondqha3k2utzsghz7hyp2koq:
+    resolution: {integrity: sha512-xaX3z4ZZIcFLvh2oUNvcX5oEofXda7giYmuplVxoOg5A7EXJMrUyqRgR+mhDhPK8LZ4PttFOBvCYDbX3sUoUig==}
+    engines: {node: ^10.12.0 || >=12.0.0}
+    peerDependencies:
+      eslint: ^7.32.0 || ^8.2.0
+      eslint-plugin-import: ^2.25.2
+    dependencies:
+      confusing-browser-globals: 1.0.11
+      eslint: 8.43.0
+      eslint-plugin-import: 2.27.5_csvgoyt7i2a6lgns4ftkdghrre
+      object.assign: 4.1.4
+      object.entries: 1.1.6
+      semver: 6.3.0
     dev: true
 
   /eslint-config-prettier/8.8.0_eslint@8.43.0:
@@ -1994,6 +2015,15 @@ packages:
       define-properties: 1.2.0
       has-symbols: 1.0.3
       object-keys: 1.1.1
+    dev: true
+
+  /object.entries/1.1.6:
+    resolution: {integrity: sha512-leTPzo4Zvg3pmbQ3rDK69Rl8GQvIqMWubrkxONG9/ojtFE2rD9fjMKfSI5BxW3osRH1m6VdzmqK8oAY9aT4x5w==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      call-bind: 1.0.2
+      define-properties: 1.2.0
+      es-abstract: 1.21.2
     dev: true
 
   /object.values/1.1.6:

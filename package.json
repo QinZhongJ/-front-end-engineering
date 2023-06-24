@@ -5,15 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint": "eslint --ext .js,.ts,.tsx src/",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx,json}": "eslint --fix",
-    "*.md": [
-      "prettier --write"
-    ]
+    "src/**/*.{js,jsx,ts,tsx}": "eslint",
+    "*.css": "stylelint",
+    "*.html": "htmlhint"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +22,7 @@
     "@typescript-eslint/parser": "^5.60.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.43.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
